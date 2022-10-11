@@ -23,6 +23,10 @@ app.use(express.static('public'))
 // Routes
 app.use('/api', apiRoutes)
 
+app.use('*', (req, res) => {
+    res.status(404).send('Not found');
+})
+
 
 
 // Socket Events

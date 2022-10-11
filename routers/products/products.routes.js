@@ -20,9 +20,9 @@ router.get('/:id', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const { title, price, thumbnail } = req.body;
+    const { title, price, thumbnail, description, code, stock } = req.body;
     console.log(req.body);
-    if ( !title || !price || !thumbnail) {
+    if ( !title || !price || !thumbnail || !description || !code || !stock ) {
         return res.status(400).json({ succes: false, error: 'Wrong body format' });
     } 
     let allProduct = await productsRoute.getAll()
@@ -30,6 +30,10 @@ router.post('/', async (req, res) => {
         title,
         price: +(price),
         thumbnail,
+        description,
+        code: +(code),
+        stock: +(stock),
+        timestamp: new Date().toLocaleString(),
         id: allProduct.length + 1
     };
     await productsRoute.save(newProduct);

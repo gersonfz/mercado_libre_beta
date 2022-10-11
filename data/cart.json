@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "timestamp": "11/10/2022, 10:57:32 a. m.",
+        "products": [
+            {
+                "title": "Ditto",
+                "price": 1800,
+                "thumbnail": "https://th.bing.com/th/id/OIP.Xan2KV688WacHDplAb6AaQHaF8?pid=ImgDet&rs=1",
+                "description": "Figura coleccionable",
+                "code": 1001,
+                "stock": 25,
+                "timestamp": "11/10/2022, 10:50:09 a. m.",
+                "id": 1
+            },
+            {
+                "title": "Ditto 2.0",
+                "price": 25000,
+                "thumbnail": "https://th.bing.com/th/id/OIP.Xan2KV688WacHDplAb6AaQHaF8?pid=ImgDet&rs=1",
+                "description": "Figura coleccionable, pero la version 2.0",
+                "code": 10010,
+                "stock": 5,
+                "timestamp": "11/10/2022, 1:09:04 p. m.",
+                "id": 2
+            },
+            {
+                "title": "Ditto 3.0",
+                "price": 250000,
+                "thumbnail": "https://th.bing.com/th/id/OIP.Xan2KV688WacHDplAb6AaQHaF8?pid=ImgDet&rs=1",
+                "description": "Figura coleccionable, pero la version 2.0",
+                "code": 10010,
+                "stock": 5,
+                "timestamp": "11/10/2022, 1:09:04 p. m.",
+                "id": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "timestamp": "11/10/2022, 1:43:21 p. m.",
+        "products": [
+            {
+                "title": "Ditto",
+                "price": 1800,
+                "thumbnail": "https://th.bing.com/th/id/OIP.Xan2KV688WacHDplAb6AaQHaF8?pid=ImgDet&rs=1",
+                "description": "Figura coleccionable",
+                "code": 1001,
+                "stock": 25,
+                "timestamp": "11/10/2022, 10:50:09 a. m.",
+                "id": 1
+            },
+            {
+                "title": "Ditto 2.0",
+                "price": 25000,
+                "thumbnail": "https://th.bing.com/th/id/OIP.Xan2KV688WacHDplAb6AaQHaF8?pid=ImgDet&rs=1",
+                "description": "Figura coleccionable, pero la version 2.0",
+                "code": 10010,
+                "stock": 5,
+                "timestamp": "11/10/2022, 1:09:04 p. m.",
+                "id": 2
+            }
+        ]
+    }
+]

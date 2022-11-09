@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose, { Collection, Schema } from 'mongoose'
 import db_config from '../../db/db.config'
 import { HttpError } from '../../utils/api.utils'
 import { HTTP_STATUS } from '../../constants/api.constants'
@@ -6,12 +6,13 @@ import { HTTP_STATUS } from '../../constants/api.constants'
 class MongoContainer {
     model
 
-    constructor(collection: any, schema: any) {
+    constructor(collection: string, schema: Schema) {
         this.model = mongoose.model(collection, schema)
     }
 
     static async connect() {
-        await mongoose.connect(typeof db_config.mongodb.URI)
+        await mongoose.connect(db_config.mongodb.URI)
+        
     }
 
     static async disconnect() {
@@ -32,7 +33,7 @@ class MongoContainer {
         return document
     }
 
-    async save(item = {}) {
+    async save(item:any = {}) {
         const newDocument = new this.model(item)
         return await newDocument.save()
     }

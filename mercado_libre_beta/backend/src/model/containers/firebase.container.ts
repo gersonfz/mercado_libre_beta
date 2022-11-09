@@ -5,7 +5,7 @@ import { HTTP_STATUS } from '../../constants/api.constants'
 import { HttpError } from '../../utils/api.utils'
 
 admin.initializeApp({
-    credential: admin.credential.cert(typeof db_config.firebase.credetentials)
+    credential: admin.credential.cert(db_config.firebase.credetentials)
 })
 
 class FirebaseContainer {

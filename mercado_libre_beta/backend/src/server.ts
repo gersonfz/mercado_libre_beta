@@ -11,7 +11,7 @@ const DATASOURCE_BY_ENV:any= {
 };
 
 
-const dataSource = DATASOURCE_BY_ENV[typeof ENV_CONFIG_PROCESS.DATASOURCE];
+const dataSource = DATASOURCE_BY_ENV[ENV_CONFIG_PROCESS.DATASOURCE];
 
 
 app.listen(PORT, () => {

@@ -4,8 +4,8 @@ import ProductsFirebaseDAO from './products/products.dao.firebase'
 import CartsMongoDAO from './cart/cart.daos.mongo'
 import CartsFirebaseDAO from './cart/cart.daos.firebase'
 
-let ProductsDAO
-let CartsDAO
+let ProductsDAO: any;
+let CartsDAO: any;
 
 switch (ENV_CONFIG_PROCESS.DATASOURCE) {
     case 'mongo':

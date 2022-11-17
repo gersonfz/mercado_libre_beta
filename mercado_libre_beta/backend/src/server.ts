@@ -11,12 +11,13 @@ const DATASOURCE_BY_ENV:any= {
 };
 
 
-const dataSource = DATASOURCE_BY_ENV[ENV_CONFIG_PROCESS.DATASOURCE];
+const dataSource:any = DATASOURCE_BY_ENV[ENV_CONFIG_PROCESS.DATASOURCE];
+
 
 
 app.listen(PORT, () => {
     dataSource.connect().then(() => {
         console.log(`Server is up and running on port: `, PORT);
         console.log("Connected to " + ENV_CONFIG_PROCESS.DATASOURCE);
-    })
+    });
 });

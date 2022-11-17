@@ -10,7 +10,6 @@ class ProductsController {
         try {
             const products = await productsDao.getAll();
             console.log('Get Products');
-            
             const response = successResponse(products);
             res.status(HTTP_STATUS.OK).json(response);
         }
@@ -22,7 +21,7 @@ class ProductsController {
         const { id } = req.params;
         try {
             console.log(id);
-            const product = await productsDao.getById(+id)
+            const product = await productsDao.getById(id)
             if (!product) {
                 return res.status(404).json({ error: `Product with id: ${id} does not exist!` });
             }

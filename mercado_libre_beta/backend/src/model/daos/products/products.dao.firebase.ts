@@ -2,7 +2,7 @@ import { HTTP_STATUS } from '../../../constants/api.constants'
 import { HttpError } from '../../../utils/api.utils'
 import FirebaseContainer from '../../containers/firebase.container'
 
-const collection = 'products'
+const collection:string = 'products'
 
 class ProductsFirebaseDAO extends FirebaseContainer {
     constructor() {
@@ -10,9 +10,9 @@ class ProductsFirebaseDAO extends FirebaseContainer {
     }
 
     async save(product:any) {
-        const { name, description, code, imgUrl, price, stock } = product;
+        const { title, description, code, thumbnail, price, stock } = product;
 
-        if (!name || !description || !code || !imgUrl || !price || !stock) {
+        if (!title || !description || !code || !thumbnail || !price || !stock) {
             const message = 'Wrong body format: missing fields'
             throw new HttpError(HTTP_STATUS.BAD_REQUEST, message)
         }
@@ -25,16 +25,13 @@ class ProductsFirebaseDAO extends FirebaseContainer {
     }
 
     async update(id:any, product:any) {
-        const { name, description, code, imgUrl, price, stock } = product
+        const { name, description, code, thumbnail, price, stock } = product
 
-        if (!name || !description || !code || !imgUrl || !price || !stock) {
+        if (!name || !description || !code || !thumbnail || !price || !stock) {
             const message = 'Wrong body format: missing fields'
             throw new HttpError(HTTP_STATUS.BAD_REQUEST, message)
         }
-        if (typeof name !== 'string' || typeof description !== 'string' || typeof code !== 'string' || typeof imgUrl !== 'string' || typeof price !== 'number' || typeof stock !== 'number') {
-            const message = 'Wrong body format: incorrect types'
-            throw new HttpError(HTTP_STATUS.BAD_REQUEST, message)
-        }
+
 
         const docRef = this.collection.doc(id)
         const doc = await docRef.get()

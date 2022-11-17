@@ -1,12 +1,12 @@
 import ENV_CONFIG_PROCESS from "../config";
-const firebaseConfig:any= require('./firebase/firebase.config.json')
+const serviceAccount:any = require('./firebase/firebase.config.json')
 
-const db_config = {
+const db_config:any = {
     mongodb: {
         URI: ENV_CONFIG_PROCESS.MONGO_URI
     },
     firebase: {
-        credetentials: firebaseConfig
+        credetentials: serviceAccount 
     }
 }
 

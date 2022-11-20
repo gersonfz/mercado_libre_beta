@@ -1,4 +1,4 @@
-import mongoose, { Collection, Schema } from 'mongoose'
+import mongoose, { Schema } from 'mongoose'
 import db_config from '../../db/db.config'
 import { HttpError } from '../../utils/api.utils'
 import { HTTP_STATUS } from '../../constants/api.constants'

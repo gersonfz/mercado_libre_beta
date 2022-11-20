@@ -10,10 +10,7 @@ const DATASOURCE_BY_ENV:any= {
     firebase: FirebaseContainer
 };
 
-
 const dataSource:any = DATASOURCE_BY_ENV[ENV_CONFIG_PROCESS.DATASOURCE];
-
-
 
 app.listen(PORT, () => {
     dataSource.connect().then(() => {

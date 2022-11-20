@@ -43,7 +43,7 @@ class ProductsController {
         }
     }
     async updateProduct(req: any, res: any, next: any) {
-        const { id } = req.params
+        const { id } = req.params        
         try {
             const updatedProduct = await productsDao.update(id, req.body)
             const response = successResponse(updatedProduct)
